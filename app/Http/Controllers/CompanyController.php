@@ -14,7 +14,7 @@ class CompanyController extends Controller
 {
     public function show()
     {
-        $companies = Company::get();
+        $companies = Company::where('trash', 0)->get();
         return view('admin.company.show', compact('companies'));
     }
 
@@ -105,6 +105,30 @@ class CompanyController extends Controller
             return redirect()->back()->with('error', 'Company not created: ' . $e->getMessage());
         }
     }
+    public function view_trash()
+    {
+        try {
+            $companies = Company::where('trash', 1)->get();
+            return view('admin.company.trash', compact('companies'));
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $th->getMessage());
+        }
+    }
 
 
+    public function trash($id)
+    {
+        $company = Company::find($id);
+        $company->trash = 1;
+        $company->save();
+        return redirect()->back()->with('success', 'Delete Suceefully');
+    }
+
+    public function restore($id)
+    {
+        $company = Company::find($id);
+        $company->trash = 0;
+        $company->save();
+        return redirect()->route('company.show')->with('success', 'Restore Suceefully');
+    }
 }

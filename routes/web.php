@@ -62,6 +62,9 @@ Route::middleware(['auth'])->group(function () {
             Route::get('show', 'show')->name('company.show');
             Route::get('create', 'create')->name('company.create');
             Route::post('store', 'store')->name('company.store');
+            Route::get('trash/{id}', 'trash')->name('company.trash');
+            Route::get('view/trash/{id}', 'view_trash')->name('company.view_trash');
+            Route::get('restore{id}', 'restore')->name('company.restore');
         });
     });
 });

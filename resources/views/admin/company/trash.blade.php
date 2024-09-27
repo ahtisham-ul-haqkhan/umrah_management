@@ -39,11 +39,16 @@
 
                             <td>
                                 <div class="d-flex">
-                                    <a href="#" class="action-btns1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="View" aria-label="View"><i class="feather feather-eye text-primary"></i></a>
-                                    <a href="{{ route('user.edit', $comp->id) }}" class="action-btns1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Edit" aria-label="Edit"><i class="feather feather-edit-2 text-danger"></i></a>
-                                    <a href="{{ route('company.trash', $comp->id) }}" class="action-btns1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Delete" aria-label="Delete"><i class="feather feather-trash-2 text-danger"></i></a>
+                                    <a href="#" class="action-btns1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="View" aria-label="View">
+                                        <span class="material-icons text-primary">visibility</span> <!-- Material Icons Eye Icon -->
+                                    </a>
+                                    <a href="{{ route('company.restore', $comp->id) }}" class="action-btns1" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="Restore" aria-label="Restore">
+                                        <span class="material-icons text-success">restore</span> <!-- Material Icons Restore Icon -->
+                                    </a>
                                 </div>
                             </td>
+
+
 
                         </tr>
                            @endforeach

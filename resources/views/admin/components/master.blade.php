@@ -24,6 +24,8 @@
     <link href="{{ asset('assets/css/boxed.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/dark.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/skin-modes.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Animate css -->
     <link href="{{ asset('assets/css/animated.css') }}" rel="stylesheet" />
@@ -51,7 +53,11 @@
 
     <!-- INTERNAL jQuery-countdowntimer css -->
     <link href="{{ asset('assets/plugins/jQuery-countdowntimer/jQuery.countdownTimer.css') }}" rel="stylesheet" />
-
+<style>
+    html{
+        zoom: 80%;
+    }
+</style>
 </head>
 
 <body class="app sidebar-mini" >
@@ -78,10 +84,10 @@
 </div>
 
     <!--Footer-->
-    <footer class="footer">
-        <div class="container">
-            <div class="row align-items-center flex-row-reverse">
-                <div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center">
+    <footer class="footer mt-5">
+        <div class="container mt-5">
+            <div class="row align-items-center flex-row-reverse mt-5">
+                <div class="col-md-12 col-sm-12 mt-3 mt-lg-0 text-center mt-5">
                     Copyright © 2021 <a href="#">Dayone</a>. Designed with <span class="fa fa-heart text-danger"></span> by <a href="#">Spruko Technologies Pvt.Ltd</a> All rights reserved.
                 </div>
             </div>
